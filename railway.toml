@@ -1,8 +1,7 @@
 [build]
 builder = "nixpacks"
-buildCommand = "pip install -r requirements.txt"
+nixpacksPlan = "./nixpacks.toml"
 
 [deploy]
-startCommand = "gunicorn dana.wsgi --log-file -"
+startCommand = "gunicorn dana.wsgi:application --log-file -"
 healthcheckPath = "/"
-healthcheckTimeout = 300
