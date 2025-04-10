@@ -1,7 +1,9 @@
 [build]
 builder = "nixpacks"
-nixpacksPlan = "./nixpacks.toml"
 
 [deploy]
 startCommand = "gunicorn dana.wsgi:application --log-file -"
 healthcheckPath = "/"
+
+[nixpacks]
+pkgs = ["python3", "gcc"]

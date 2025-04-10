@@ -1,1 +1,1 @@
-web: gunicorn dana.wsgi --log-file -
+web: gunicorn dana.wsgi:application --log-file -
